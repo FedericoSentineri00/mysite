@@ -350,3 +350,43 @@ img.mfp-img {
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
+
+    /* Style per il Modal */
+.modal {
+  display: none; /* Nascondi il modal di default */
+  position: fixed;
+  z-index: 999; /* Sovrascrive gli altri contenuti */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Sfondo scuro semi-trasparente */
+  overflow: auto; /* Rende il contenuto scrollabile */
+  padding-top: 60px;
+}
+
+/* Immagine nel modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* X per chiudere il modal */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #f1f1f1;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -33,6 +33,20 @@
             color: white;
             transition: background-color 0.3s ease-in-out; /* Per una transizione fluida quando lo sfondo cambia */
         }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
     </style>
     
 <!--
@@ -59,7 +73,7 @@ https://templatemo.com/tm-578-first-portfolio
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a href="index.html" class="navbar-brand mx-auto mx-lg-0">First</a>
+                <a href="index.html" class="navbar-brand mx-auto mx-lg-0">PM</a>
 
                 <div class="d-flex align-items-center d-lg-none">
                     <i class="navbar-icon bi-telephone-plus me-3"></i>
@@ -93,6 +107,11 @@ https://templatemo.com/tm-578-first-portfolio
                         <li class="nav-item">
                             <a class="nav-link active" href="gallery.html">Gallery</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="eventi.html">Blog Eventi</a>
+                        </li>
+
                     </ul>
 
                     <div class="d-lg-flex align-items-center d-none ms-auto">
@@ -112,89 +131,120 @@ https://templatemo.com/tm-578-first-portfolio
             </section>
 
             <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="painting-thumb">
-                                
-                                <a href="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="popup-image">
-                                    <img src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="img-fluid" alt="">
-                                </a>
-                                
-                                <div class="painting-info">
-                                    <h3 class="painting-title">Nome</h3>
-                                    <small class="painting-tag">info</small>
+
+                <div class="album py-5 bg-light">
+
+                    <div class="container">
+                        <div id="imageModal" class="modal">
+                        <span id="closeBtn" class="close">&times;</span>
+                        <img id="modalImage" class="modal-content" src="" alt="Immagine" />
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" src="images/gallery/cervo.png" alt="Thumbnail" width="100%" height="225" style="object-fit: cover;">
+
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button class="openImageBtn btn btn-sm btn-outline-secondary" data-image="images/gallery/cervo.png">View</button>
+                                            </div>
+                                        <small class="text-muted">8 Dicembre 2020</small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="painting-thumb">
-                                
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" src="images/gallery/4stagioni.jpeg" alt="Thumbnail" width="100%" height="225" style="object-fit: cover;">
 
-                                <img src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="img-fluid" alt="">
-
-                                <div class="painting-info">
-                                    <h3 class="painting-title">Nome</h3>
-                                    <small class="painting-tag">info</small>
+                                <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="openImageBtn btn btn-sm btn-outline-secondary" data-image="images/gallery/4stagioni.jpeg">View</button>
+                                    </div>
+                                    <small class="text-muted">9 minutes</small>
+                                </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="painting-thumb">
-                                
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" src="images/gallery/gatto.jpg" alt="Thumbnail" width="100%" height="225" style="object-fit: cover;">
 
-                                <img src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="img-fluid" alt="">
-
-                                <div class="painting-info">
-                                    <h3 class="painting-title">Nome</h3>
-                                    <small class="painting-tag">info</small>
+                                <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="openImageBtn btn btn-sm btn-outline-secondary" data-image="images/gallery/gatto.jpg">View</button>
+                                    </div>
+                                    <small class="text-muted">9 minutes</small>
+                                </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="painting-thumb">
-                                
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" src="images/gallery/leone.jpg" alt="Thumbnail" width="100%" height="225" style="object-fit: cover;">
 
-                                <img src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="img-fluid" alt="">
-
-                                <div class="painting-info">
-                                    <h3 class="painting-title">Nome</h3>
-                                    <small class="painting-tag">info</small>
+                                <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="openImageBtn btn btn-sm btn-outline-secondary" data-image="images/gallery/leone.jpg">View</button>
+                                    </div>
+                                    <small class="text-muted">9 minutes</small>
+                                </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="painting-thumb">
-                                
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" src="images/gallery/nave.jpg" alt="Thumbnail" width="100%" height="225" style="object-fit: cover;">
 
-                                <img src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="img-fluid" alt="">
-
-                                <div class="painting-info">
-                                    <h3 class="painting-title">Nome</h3>
-                                    <small class="painting-tag">info</small>
+                                <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="openImageBtn btn btn-sm btn-outline-secondary" data-image="images/gallery/nave.jpg">View</button>
+                                    </div>
+                                    <small class="text-muted">9 minutes</small>
+                                </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="painting-thumb">
-                                
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" src="images/gallery/nota.jpeg" alt="Thumbnail" width="100%" height="225" style="object-fit: cover;">
 
-                                <img src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="img-fluid" alt="">
-
-                                <div class="painting-info">
-                                    <h3 class="painting-title">Nome</h3>
-                                    <small class="painting-tag">info</small>
+                                <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="openImageBtn btn btn-sm btn-outline-secondary" data-image="images/gallery/nota.jpeg">View</button>
+                                    </div>
+                                    <small class="text-muted">9 minutes</small>
+                                </div>
                                 </div>
                             </div>
                         </div>
+
+
+                    </div>
                     </div>
                 </div>
+
             </section>
+
+            
 
             <section class="contact section-padding" id="section_5">
                 <div class="container">
@@ -224,37 +274,39 @@ https://templatemo.com/tm-578-first-portfolio
                                     <li class="footer-menu-item"><a href="#" class="footer-menu-link">SEO</a></li>
                                 </ul>
 
-                                <strong class="site-footer-title d-block mt-4 mb-3">Stay connected</strong>
+                                <strong class="site-footer-title d-block mt-4 mb-3">rimani aggiornato</strong>
 
                                 <ul class="social-icon">
+                                    <!--
                                     <li class="social-icon-item"><a href="https://twitter.com/minthu" class="social-icon-link bi-twitter"></a></li>
+                                    -->
+                                    <li class="social-icon-item"><a href="https://www.instagram.com/patriziamacor/" class="social-icon-link bi-instagram"></a></li>
 
-                                    <li class="social-icon-item"><a href="#" class="social-icon-link bi-instagram"></a></li>
-
-                                    <li class="social-icon-item"><a href="#" class="social-icon-link bi-pinterest"></a></li>
-
+                                    <li class="social-icon-item"><a href="https://www.facebook.com/patrizia.macor/?locale=it_IT" class="social-icon-link bi-facebook"></a></li>
+                                    <!--
                                     <li class="social-icon-item"><a href="https://www.youtube.com/templatemo" class="social-icon-link bi-youtube"></a></li>
+                                    -->
                                 </ul>
 
-                                <strong class="site-footer-title d-block mt-4 mb-3">Start a project</strong>
+                                <strong class="site-footer-title d-block mt-4 mb-3">Hai un progetto?</strong>
 
-                                <p class="mb-0">I’m available for freelance projects</p>
+                                <p class="mb-0">A volte non cè nulla di piu bello di creare un ricordo tramite un bellissimo dipinto.</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-12 ps-lg-0">
                             <div class="contact-info d-flex flex-column">
-                                <strong class="site-footer-title d-block mb-3">About</strong>
+                                <strong class="site-footer-title d-block mb-3">Contattami</strong>
 
                                 <p class="mb-2">
-                                    Joshua is a professional web developer. Feel free to get in touch with me.
-                            </p>
+                                    Hai qualche progetto o richiesta che ti piacerebbe realizzare? Contattami e parliamone!
+                                </p>
 
                                 <strong class="site-footer-title d-block mt-4 mb-3">Email</strong>
 
                                 <p>
-                                    <a href="mailto:hello@josh.design">
-                                        hello@josh.design
+                                    <a href="mailto:patriziamacor@gmail.com">
+                                        patriziamacor@gmail.com
                                     </a>
                                 </p>
 
@@ -262,7 +314,7 @@ https://templatemo.com/tm-578-first-portfolio
 
                                 <p class="mb-0">
                                     <a href="tel: 347 9131961">
-                                        347 9131961
+                                        +39 347 9131961
                                     </a>
                                 </p>
                             </div>
@@ -303,7 +355,7 @@ https://templatemo.com/tm-578-first-portfolio
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>     
         </main>
 
         <footer class="site-footer">
@@ -326,11 +378,16 @@ https://templatemo.com/tm-578-first-portfolio
 
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
+        <script src="js/openImage.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/custom.js"></script>
+
+
+     
+
 
     </body>
 </html>
