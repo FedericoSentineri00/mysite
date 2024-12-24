@@ -776,6 +776,12 @@ strong {
   height: 100%;
 }
 
+.popup-image-gallery {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .projects-image {
   border-radius: var(--border-radius-medium);
   display: block;
@@ -1214,6 +1220,17 @@ strong {
 
   .hero-image {
     min-width: inherit;
+  }
+}
+
+.responsive-box {
+  height: 12vh; /* Altezza di base per desktop o schermi più grandi */
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .responsive-box {
+      height: 3000px; /* Aumenta l'altezza sui dispositivi mobili */
   }
 }
 
