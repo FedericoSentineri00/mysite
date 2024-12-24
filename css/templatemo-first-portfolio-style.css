@@ -1228,4 +1228,9 @@ strong {
   background-color: var(--primary-color);
 }
 
+@media (max-width: 768px) {
+  .responsive-box {
+      height: 110px; /* Aumenta l'altezza sui dispositivi mobili */
+  }
+}
 
